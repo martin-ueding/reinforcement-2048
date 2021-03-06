@@ -4,6 +4,7 @@ import sys
 import tensorflow as tf
 import numpy as np
 
+from tf_agents.environments import py_environment
 from tf_agents.environments import tf_environment
 from tf_agents.environments import tf_py_environment
 from tf_agents.environments import utils
@@ -35,7 +36,7 @@ class Environment(py_environment.PyEnvironment):
         )
 
     def observation_spec(self):
-        # TODO
+        return self._observation_spec
 
     def action_spec(self):
         return self._action_spec
