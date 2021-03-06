@@ -53,11 +53,10 @@ def make_agent():
         input_spec=train_env.observation_spec()
     )
 
-    actor_net = actor_distribution_network.ActorDistributionNetwork(
-        train_env.observation_spec(),
-        train_env.action_spec(),
-        fc_layer_params=fc_layer_params)
-
+    # actor_net = actor_distribution_network.ActorDistributionNetwork(
+    #     train_env.observation_spec(),
+    #     train_env.action_spec(),
+    #     fc_layer_params=fc_layer_params)
 
     optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=learning_rate)
 
